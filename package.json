@@ -1,0 +1,20 @@
+{
+  "name": "instagram-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamin2065/instagram-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamin2065/instagram-clone/issues"
+  },
+  "homepage": "https://github.com/hamin2065/instagram-clone#readme"
+}
