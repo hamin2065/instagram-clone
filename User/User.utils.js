@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import client from "../client";
 
 export const getUser = async (token) => {
     try{
@@ -27,7 +28,7 @@ export const protectedResolver = (ourResolver) => (
     if(!context.loggedInUser){
         return {
             ok:false,
-            error:"로그인 하세요",
+            error:"로그인 하세요"
         };
     }
     return ourResolver(root,args,context,info);

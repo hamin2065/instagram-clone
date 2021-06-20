@@ -19,7 +19,7 @@ export default {
                 avatar,
                 password:newPassword
             } = args;
-            let avatar = null;
+            let avatarUrl = null;
             if(avatar){
                 const {filename, createReadStream} = await avatar;
                 const newFileName = `${loggedInUser.id}-${Date.now()}-${filename}`;
