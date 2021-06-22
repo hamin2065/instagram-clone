@@ -7,6 +7,10 @@ export default{
             return await client.user.findUnique({
                 where:{
                     username
+                },
+                include:{
+                    followers:true,
+                    follwing:true
                 }
             });
         }
