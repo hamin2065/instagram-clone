@@ -10,7 +10,7 @@ export default{
                 }
             }).followers({
                 take:5,
-                skip:(page-1)+5
+                skip:(page-1)*5
             });
             const totalFollowers = await client.user.count({
                 where:{
@@ -24,7 +24,7 @@ export default{
             return{
                 ok:true,
                 followers,
-                totalFollowers:Math.ceil(totalFollowers/5)
+                totalPage:Math.ceil(totalFollowers/5)
             };
         }
     }
