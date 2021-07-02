@@ -4,6 +4,16 @@ export default{
     Query:{
         seeFollowers: async(_,{args}) => {
             const {username, page} = args;
+            const check = await client.user.findUnique({
+                where: {username},
+                select: {id:true},
+            });
+            if (!check){
+                return{
+                    ok: false,
+                    error: "User not found",
+                };
+            }
             const followers = await client.user.findUnique({
                 where:{
                     username

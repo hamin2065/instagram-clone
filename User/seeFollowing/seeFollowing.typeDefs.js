@@ -4,7 +4,7 @@ export default gql`
     type SeeFollowingResult{
         ok: Boolean!
         error: String
-        followers: [User]
+        following: [User]
     }
     type Query{
         seeFollowing(username:String!,lastId:Int):seeFollowingResult!
