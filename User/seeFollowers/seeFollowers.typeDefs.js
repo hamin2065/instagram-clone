@@ -1,10 +1,10 @@
-import gql from "apollo-server";
+import {gql} from "apollo-server";
 
 export default gql`
-    type seeFollwersResult{
+    type seeFollowersResult{
         ok: Boolean!
         error: String!
-        followers: [USer]
+        followers: [User]
         totalPage: Int
     }
     type Query{
