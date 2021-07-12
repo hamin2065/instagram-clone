@@ -12,5 +12,31 @@ export default {
                 }
             }
         }})
+    },
+    Hashtag:{
+        photos:({id},{page},{loggedInUser}) => {
+            if(!loggedInUser){
+                return false;
+            }
+            return client.hashtag.findUnique({
+                where:{
+                    id
+                }
+            }).photos({
+                take:5,
+                skip:(page-1)*5
+            });
+        },
+        totalPhotos:({id}) => {
+            return client.photo.count({
+                shere:{
+                    hashtags:{
+                        some:{
+                            id
+                        }
+                    }
+                }
+            });
+        }
     }
 }
