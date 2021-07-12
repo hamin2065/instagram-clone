@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/hamin2065/instagram-clone#readme",
   "dependencies": {
-    "@prisma/client": "^2.22.1",
+    "@prisma/client": "^2.26.0",
     "apollo-server": "^2.24.0",
     "apollo-server-express": "^2.25.0",
     "bcrypt": "^5.0.1",
@@ -37,7 +37,7 @@
     "@babel/node": "^7.13.13",
     "@babel/preset-env": "^7.14.1",
     "nodemon": "^2.0.7",
-    "prisma": "^2.22.1"
+    "prisma": "^2.26.0"
   },
   "resolutions": {
     "fs-capacitor": "^6.2.0",
