@@ -25,7 +25,7 @@ export default {
                 const newFileName = `${loggedInUser.id}-${Date.now()}-${filename}`;
                 const readStream = createReadStream();
                 // file -- ReadStream -- writeSteam --> Storage
-                const writeStream = createWriteStream(orocess.cwd()+"/uploads/"+newFileName);
+                const writeStream = createWriteStream(process.cwd()+"/uploads/"+newFileName);
                 readStream.pipe(writeStream);
                 avatarUrl = `http://localhost:4000/static/${newFileName}`;
             }
