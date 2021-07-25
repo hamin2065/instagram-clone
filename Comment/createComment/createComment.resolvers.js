@@ -26,7 +26,7 @@ export default{
                         id:photoId
                     }
                 },
-                User:{
+                user:{
                     connect:{
                         id:loggedInUser.id
                     }
