@@ -18,7 +18,7 @@ export const getUser = async (token) => {
     }
 };
 
-//function a(b()) 
+
 export const protectedResolver = (ourResolver) => (
     root,
     args,
@@ -26,10 +26,15 @@ export const protectedResolver = (ourResolver) => (
     info
 ) => {
     if(!context.loggedInUser){
-        return {
-            ok:false,
-            error:"로그인 하세요"
-        };
+        const query = info.operation.operation === "query";
+        if(query){
+            return null;
+        }else{
+            return {
+                ok:false,
+                error:"로그인 하세요"
+            };
+        }
     }
     return ourResolver(root,args,context,info);
 }
