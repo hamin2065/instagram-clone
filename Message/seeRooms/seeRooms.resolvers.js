@@ -3,15 +3,14 @@ import {protectedResolver} from "../../User/User.utils";
 
 export default{
     Query:{
-        seeRoom: protectedResolver(async(_,{id},{loggedInUser}) => 
-            client.room.findFirst({
+        seeRooms: protectedResolver(async(_,__,{loggedInUser}) => 
+            client.room.findMany({
                 where:{
-                    id,
                     users:{
                         some:{
                             id:loggedInUser.id
                         }
-                    }   
+                    }
                 }
             })
         )
