@@ -27,27 +27,27 @@ API
 - [x] See Photo Likes
 - [x] See Feed
 - [x] See Photo Comments
-- [ ] Delete Photo
+- [x] Delete Photo
 
 ## Comments
 
-- [ ] Comment on Photo
-- [ ] Delete Comment
-- [ ] Edit Comment
+- [x] Comment on Photo
+- [x] Delete Comment
+- [x] Edit Comment
 
 ## Refactor
 
-- [ ] Mutation Responses
+- [x] Mutation Responses
 
 ## Extras
 
-- [ ] S3 Image Upload
+- [x] S3 Image Upload
 
 ## DMs
 
-- [ ] See Rooms
-- [ ] Send Message (Create Room)
-- [ ] See Room
-- [ ] Computed Fields
-- [ ] See (Read) Message
-- [ ] Realtime Messages
+- [x] See Rooms
+- [x] Send Message (Create Room)
+- [x] See Room
+- [x] Computed Fields
+- [x] See (Read) Message
+- [x] Realtime Messages

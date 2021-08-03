@@ -1,4 +1,6 @@
 import client from "../../client";
+import { NEW_MESSAGE } from "../../constant";
+import pubsub from "../../pubsub";
 import { protectedResolver } from "../../User/User.utils";
 
 export default{
@@ -67,6 +69,7 @@ export default{
                     }
                 }
             });
+            pubsub.publish(NEW_MESSAGE,{roomUpdates:{...message}});
             return{
                 ok:true
             }
